@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- 课堂练习2 组件 -->
+    <h4>bootstrap练习2……组件</h4>
+    <p>“class=component”下的"alert"组件</p>
+    <div class="component test">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <h4>H4标题Alert</h4>
+          hello,this is "component/.alert.alert-primary [role=alert]",
+          <a href="#" class="alert-link">see more.</a>
+          给a标签添加alert-link，匹配当前alert的颜色属性；
+            <br/>
+            <code>
+              添加关闭按钮  "button标签";class=close 默认关闭按钮右下&times <br />
+              添加"alert-dismissible"后,关闭符号右上显示 <br/>
+              让此处的deta-dismiss="alert"关闭按钮作用，必须引入bootstrap.js <br/>
+              给外层div .alert添加fade show属性，让关闭显示有过渡效果；<br/>
+              可通过js去关闭组件；bootstrap.js代码如下<br/>
+              $(document).ready(() => {
+                $('.close-alert').click(() => {
+                  $('.alert').alert('close')
+                })
+              })
+            </code>
+          <button class="close" data-dismiss="alert">&times</button>
+        </div>
+        <button class="btn btn-danger close-alert">close</button>
+    </div>
+    <!-- badge标签组件  -->
+    <div class="component test">
+      <code>badge badge-primary 样式 未读消息提示组件</code>
+      <span class="badge badge-primary">new message</span><br/>
+      <code>badge badge-secondary 样式</code>
+      <span class="badge badge-secondary">new message</span><br/>
+      <code>badge badge-secondary badge-pill 圆角加至按钮内</code><br/>
+      <h3>hello
+        <div class="badge badge-secondary badge-pill">news</div>
+      </h3>
+      <button class="btn btn-primary">
+        badge-secondary~
+        <span class="badge badge-secondary badge-pill">news</span>
+      </button>
+      <button class="btn btn-primary">
+        badge-light~
+        <span class="badge badge-light badge-pill">news</span>
+      </button>
+    </div>
+    <!-- breadcrumb导航路径组件  -->
+    <div class="component test">
+      <code>breadcrumb导航路径组件，用户在浏览器的位置<br/>
+            nav或div包含ul>li或ol>li "breadcrumb-item"<br/>
+            用户当前的位置取消a标签的链接，添加一个active类；
+      </code><br/>
+      <div>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">首页</a></li>
+          <li class="breadcrumb-item active">课程</li>
+          <li class="breadcrumb-item"><a href="#">bootstrap</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- buttons按钮组件 -->
+    <div class="component test">
+        <code>a标签有链接 class="btn(按钮类) btn-danger(情景类)">Button<br/>
+              点击后要执行动作可使用button标签，点击要跳转到某个位置可使用a标签；
+        </code><br/>
+        <a href="#" class="btn btn-danger">Button</a>  <br/>
+        <code>button标签 class="btn(按钮类) btn-danger(情景类)">Button</code><br/>
+        <button class="btn btn-primary">Button</button> <br/>
+        <code>按钮组件描边样式 btn btn-outline-primary,表示尺寸的可加btn-lg或btn-sm等</code><br/>
+        <button class="btn btn-outline-primary">Button</button>
+        <button class="btn btn-outline-danger btn-lg">btn-lg</button>
+        <button class="btn btn-outline-primary btn-sm">btn-sm</button>
+        <button class="btn btn-success btn-md">btn-md正常</button>  <br/>
+        <code>button按钮转块显示/描边/，禁用状态disabled</code> <br/>
+        <button class="btn btn-danger btn-block">Button</button>
+        <button class="btn btn-outline-success btn-block">Button</button>
+        <button class="btn btn-outline-primary btn-block" disabled>Button</button>
+    </div>
+    <!-- button group按钮 -->
+    <div class="component test">
+        <code>btn-group按钮群组组件。可添加尺寸类 btn-group-sm,btn-group-lg<br/>
+          button  btn btn-secondary群组显示,可添加了active类
+        </code> <br/>
+        <code>btn-group-sm小尺寸组件</code><br/>
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-danger btn-secondary active">1</button>
+            <button class="btn btn-secondary">2</button>
+            <button class="btn btn-secondary">3</button>
+        </div>
+        <br/>
+        <code>btn-group正常尺寸组件</code><br/>
+        <div class="btn-group">
+            <button class="btn btn-secondary">1</button>
+            <button class="btn btn-secondary active">2</button>
+            <button class="btn btn-secondary">3</button>
+        </div>
+        <br/>
+        <code>btn-group-lg大尺寸组件</code><br/>
+        <div class="btn-group btn-group-lg">
+            <button class="btn btn-secondary">1</button>
+            <button class="btn btn-secondary">2</button>
+            <button class="btn btn-success btn-secondary active">3</button>
+        </div>
+        <br/>
+        <code>btn-group-vertical让组件垂直显示</code><br/>
+        <div class="btn-group-vertical">
+            <button class="btn btn-secondary">1</button>
+            <button class="btn btn-secondary">2</button>
+            <button class="btn btn-secondary">3</button>
+        </div>
+    </div>
+    <!-- card卡片组 -->
+    <div class="component test">
+      <code>div.card/.card-title/.card-body/.card-text/.card-link/card-footer</code><br/>
+      <div class="card">
+        <div class="card-header">
+          <h4>card-header</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-title"><h4>card-title</h4></div>
+          <p class="card-text">card-text:description</p>
+          <a href="#" class="card-link">card-link</a>
+          <a href="#" class="card-link">card-link</a>
+        </div>
+        <div class="card-footer">card-footer</div>
+      </div>
+      <!-- 文字居中显示 -->
+      <code>文字居中显示 .card text-center</code>
+      <div class="card text-center">
+        <div class="card-header">
+          <h4>card-header</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-title"><h4>card-title</h4></p>
+          <p class="card-text">卡片body文字card-text</p>
+          <a href="#" class="card-link">card-link链接</a>
+          <a href="#" class="card-link">card-link链接</a>
+        </div>
+        <div class="card-footer">底部card-footer</div>
+      </div>
+      <!-- 文字靠右显示 -->
+      <code>文字靠右显示text-right</code>
+      <div class="card text-right">
+        <div class="card-header">
+          <h4>h4>card-header卡片头部</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-title">h4>card-title卡片标题</div>
+          <p class="card-text">卡片文字描述card-text</p>
+          <a href="#" class="card-link">文本链接card-link</a>
+          <a href="#" class="card-link">more…</a>
+        </div>
+        <div class="card-footer">card-footer卡片底部</div>
+      </div>
+      <!-- 卡片内头部或底部添加图片 -->
+      <code>卡片头部或底部添加图片<br/>
+            card-img-top 图片顶部圆角属性；card-img-bottom 图片底部圆角属性
+      </code>
+
+      <div class="card text-center col-6">
+        <!-- <div class="card-header">
+          <h4>title</h4>
+          <img src="images/1.jpg" alt="" class="card-img-top">
+        </div> -->
+        <img src="images/1.jpg" alt="" class="card-img-top">
+        <div class="card-body">
+          <div class="card-title">h4>card-title卡片标题</div>
+          <p class="card-text">卡片文字描述card-text</p>
+          <a href="#" class="card-link">文本链接card-link</a>
+          <a href="#" class="card-link">more…</a>
+        </div>
+        <!-- <img src="images/2.jpg" alt="" class="card-img-end"> -->
+        <!-- <div class="card-footer">card-footer卡片底部</div> -->
+      </div>
+      <code>卡片body文字显示在图片上<br/>
+            card-body替换为card-img-overlay <br/>
+            图片img类换为 card-img，图片四个角均为圆角
+            设置大小col-4
+      </code>
+
+      <div class="card text-center col-4 text-white">
+        <img src="images/3.jpg" alt="" class="card-img">
+        <div class="card-img-overlay">
+          <div class="card-title">h4>card-title卡片标题</div>
+          <p class="card-text">卡片文字描述card-text</p>
+          <a href="#" class="card-link">文本链接card-link</a>
+          <a href="#" class="card-link">more…</a>
+        </div>
+      </div>
+    </div>
+    <!-- 卡片群组与布局 -->
+    <div class="component test">
+      <code>卡片群组与布局 card-group</code>
+        <div class="card-group">
+            <div class="card">
+              <code>卡片项之间等高</code><br/>
+              <div class="card-header">
+                <h4>卡片头部card-header</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-title"><h5>card-title内容标题</h5></p>
+                <p class="card-text">card-text卡片内容描述</p>
+                <p class="card-text">description...</p>
+                <a href="#" class="card-link">card-link卡片内容插入文本链接</a>
+                <a href="#" class="card-link">card-link卡片内容插入文本链接</a>
+              </div>
+              <div class="card-footer">卡片底部card-footer</div>
+            </div>
+            <!-- 卡片2 -->
+            <div class="card">
+              <code>卡片项是等高的</code><br/>
+              <div class="card-header">
+                <h4>卡片头部card-header</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-title"><h5>card-title内容标题</h5></p>
+                <p class="card-text">card-text卡片内容描述</p>
+                <a href="#" class="card-link">card-link卡片内容插入文本链接</a>
+                <a href="#" class="card-link">card-link卡片内容插入文本链接</a>
+              </div>
+              <div class="card-footer">
+                卡片底部card-footer
+                <a href="#" class="card-link">card-link卡片内容插入文本链接</a>
+              </div>
+            </div>
+        </div>
+        <!-- 卡片组之间分开--间距 -->
+        <code>卡片之间有间距card-group换为card-deck</code>
+        <div class="card-deck">
+          <!-- 卡片组1 -->
+            <div class="card text-center">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">回到顶部</a>
+              </div>
+            </div>
+            <!-- 卡片组2 -->
+            <div class="card text-right">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">回到顶部</a>
+              </div>
+            </div>
+        </div>
+        <!-- 卡片组瀑布流columns -->
+        <code>卡片组瀑布流效果card-group/card-deck换为card-columns</code>
+        <div class="card-columns">
+          <!-- 卡片组1 -->
+            <div class="card text-center">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">text-center</p>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">瀑布流</a>
+              </div>
+            </div>
+            <!-- 卡片组2 -->
+            <div class="card text-right">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">text-right</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">more...</a>
+              </div>
+            </div>
+            <!-- 卡片组3 -->
+            <div class="card">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">text-默认左</p>
+                  <p class="card-text">text-默认左</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">more...</a>
+              </div>
+            </div>
+            <!-- 卡片组4 -->
+            <div class="card text-right">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">文本右</p>
+                  <p class="card-text">text-right</p>
+                  <p class="card-text">description...</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">more...</a>
+              </div>
+            </div>
+            <!-- 卡片组5 -->
+            <div class="card text-right">
+              <div class="card-header">
+                <h4>card-header...title</h4>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5>card-title</h5>
+                  <p class="card-text">文字文本</p>
+                  <p class="card-text">text-right</p>
+                  <p class="card-text">description...</p>
+                  <a href="#" class="card-link">link文本链接</a>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="card-link">more...</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- carousel旋转木马/幻灯片 -->
+    <div class="component test">
+      <code>.carousel.slide>carousel-inner>carousel-item>img>.d-block.w-100<br/>
+            carousel=>data-ride:carousel <br>
+            .slide向左旋转；
+      </code>
+      <div class="carousel slide" data-ride = "carousel" data-interval = "1500">
+        <div class="carousel-inner demo">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/1.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img class="d-clock w-100" src="images/2.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- 添加左右控制元素 -->
+      <code>.carousel.slide>carousel-inner>carousel-item>img>.d-block.w-100<br/>
+            .slide向左旋转；自动旋转属性:data-ride="carousel"  //设置滚动时间 data-interval = "time"<br>
+            a > class="carousel-control-prev" data-slide="prev" <br>
+            span > carousel-control-prev-icon <br>
+            a > class="carousel-control-next" data-slide="next" <br>
+            span > carousel-control-next-icon <br>
+            tab小图标 <br>
+            ul.carousel-indicators > li[data-target = "id" , data-slide-to = "数组序列"]，给当前li添加class .active <br>
+            !--给旋转木马调整carousel-item统一高度--height/max-height; <br>
+            carousel-inner > carousel-item > img // max-height // object-fit:cover;
+      </code>
+      <div class="carousel slide" id="carousel-demo" data-ride="carousel" data-interval="1500">
+        <ul class="carousel-indicators">
+          <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-demo" data-slide-to="1"></li>
+          <li data-target="#carousel-demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner demo">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/1.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img class="d-clock w-100" src="images/2.jpg" alt="">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/3.jpg" alt="">
+          </div>
+        </div>
+        <a href="#carousel-demo" class="carousel-control-prev" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#carousel-demo" class="carousel-control-next" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+    <!-- collapse切换内容的可见性 -->
+    <div class="component test">
+      <code> collapse > card card-body,通常情况collapse里的内容是不可见的 <br>
+            通常在外层添加一个a链接，地址为collapse的id; 在添加一个data-toggle = "collapse" 就可以切换显示状态！<br>
+            或者用button按钮的 data-target = "id" 属性切换显示状态！
+      </code><br>
+
+      <a href="#collapse-demo" class="btn btn-primary" data-toggle = "collapse">collapse link</a>
+      <button class="btn btn-primary" data-toggle="collapse" data-target = "#collapse-demo">collapse button</button>
+      <div class="collapse" id="collapse-demo">
+        <div class="card card-body">
+          hello~collapse!
+        </div>
+      </div>
+    </div>
+    <!-- accordion手风琴切换显示状态 -->
+    <div class="component test">
+      <code>
+        accordion手风琴切换显示状态,.card > .card-header a href="id" data-toggle = "collapse" <br>
+        .collapse id="" > .collapse > .card-body <br>
+        给collapse添加data-parent = "外层id #accordion" ,给默认需要显示的组添加 show 类
+      </code><br>
+      <div id="accordion">
+        <!-- 手风琴组卡1 -->
+        <div class="card">
+          <div class="card-header">
+            <a href="#collapse-1" data-toggle="collapse">title...组1</a>
+          </div>
+          <div class="collapse show" id="collapse-1" data-parent = "#accordion">
+            <div class="card-body">hello~decription...手风琴卡组1</div>
+          </div>
+        </div>
+        <!-- 手风琴组卡2 -->
+        <div class="card">
+          <div class="card-header">
+            <a href="#collapse-2" data-toggle="collapse">title...组2</a>
+          </div>
+          <div class="collapse" id="collapse-2" data-parent = "#accordion">
+            <div class="card-body">hello~decription...手风琴卡组2</div>
+          </div>
+        </div>
+        <!-- 手风琴组卡3 -->
+        <div class="card">
+          <div class="card-header">
+            <a href="#collapse-3" data-toggle="collapse">title...组3</a>
+          </div>
+          <div class="collapse" id="collapse-3" data-parent = "#accordion">
+            <div class="card-body">hello~decription...手风琴卡组3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+</body>
+</html>
