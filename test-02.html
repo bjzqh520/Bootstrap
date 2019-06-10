@@ -8,6 +8,7 @@
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.14.7/umd/popper.js"></script>  <!-- dropdown必须用的popper.js插件 -->
   <script src="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/js/bootstrap.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -482,6 +483,384 @@
         </div>
       </div>
     </div>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- dropdown下拉菜单 -->
+    <div class="component test">
+      <div class="row">
+        <div class="col-4">
+          <div class="dropdown">
+            <code>
+              .dropdown > .dropdown-menu.show > .dropdown-header | .dropdown-item |.dropdown-divider <br>
+            </code><br>
+            <div class="dropdown-menu show">
+              <div class="dropdown-header">web language</div>
+              <a href="#" class="dropdown-item active btn-danger">HTML</a>
+              <a href="#" class="dropdown-item">CSS</a>
+              <a href="#" class="dropdown-item">JavaScript</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">more...</a>
+            </div>
+          </div>
+        </div>
+          <!-- button按钮式下拉菜单 -->
+          <div class="col-4">
+              <code>
+                 分离式下拉，小箭头下拉，a标签执行链接动作; .btn-group//dropup dropdown-menu-left显示位置 data-offset=""设置偏移量  dropdown-toggle-split span.sr-only<br>
+              </code><br>
+              <!-- 显/隐分离 -->
+              <span>显性分离example:</span>
+              <a href="#" class="btn btn-outline-warning">Dropdown</a>
+              <button class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"><span class="sr-only">toggle Dropdown</span></button>
+              <br/><br/>
+              <div class="btn-group" style="position:absolute">
+                <span>隐性分离example:</span>
+                <a href="#" class="btn btn-danger">Dropdown</a>
+                <button class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"><span class="sr-only">toggle Dropdown</span></button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-header">web language</div>
+                  <a href="#" class="dropdown-item">HTML</a>
+                  <a href="#" class="dropdown-item">CSS</a>
+                  <a href="#" class="dropdown-item">JavaScript</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">more...</a>
+                </div>
+            </div>
+          </div>
+          <!-- 链接分离式下拉按钮 -->
+          <div class="col-4">
+            <div class="dropdown">
+              <code>
+                button按钮式下拉菜单：.btn.dropdown-toggle data-toggle = "dropdown"<br>
+              </code><br>
+              <button class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown">dropdown</button>
+              <a href="#" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">web language</div>
+                <a href="#" class="dropdown-item">HTML</a>
+                <a href="#" class="dropdown-item">CSS</a>
+                <a href="#" class="dropdown-item">JavaScript</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">more...</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- jumbotron大屏幕 -->
+    <div class="component test" style="margin-top: 80px;">
+        <div class="jumbotron">
+          <h2 class="display-3">hello...大屏幕</h2>
+          <p class="lead mb-3">welcome to ...</p>
+          <p class="lead mb-2">jumbotron .display-1~5 p.lead正文描述 按钮btn-lg大</p>
+          <a href="#" class="btn btn-primary btn-lg">jumbotron</a>
+        </div>
+    </div>
+    <!-- 列表组list-group -->
+    <div class="component test">
+        <!-- ul>li无序列表组 -->
+        <div class="row justify-content-between">
+            <div class="col-5">
+                <h3>列表群组</h3>
+                <code>list-group > list-group-item > span.badge</code><br/>
+                <ul class="list-group">
+                  <li class="list-group-item">HTML</li>
+                  <li class="list-group-item d-flex justify-content-start align-items-center">CSS
+                    <span class="badge badge-danger badge-pill">2</span>
+                  </li>
+                  <li class="list-group-item">JavaScript</li>
+                </ul>
+            </div>
+            <!-- div情景组 -->
+            <div class="col-5">
+              <div class="list-group">
+                <a href="#" class="list-group-item disabled">disabled-禁用</a>
+                <a href="#" class="list-group-item list-group-item-primary">primary</a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                  Action
+                  <span class="badge badge-primary badge-pill">12</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-danger">Danger</a>
+                <a href="#" class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+                  Warning
+                  <span class="badge badge-warning badge-pill">1</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-success">Success</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- list-group列表群组切换显示状态 -->
+    <div class="component test">
+      <div class="row">
+        <code>list-group列表群组切换显示状态..list-group-item..list-group-item-'action'/'primary'情景状态..active > .tab-content..tab-pane.fade.show.active #id</code>
+        <div class="col-4">
+          <div class="list-group">
+            <a data-toggle="list" href="#html-content" class="list-group-item list-group-item-action active">HTML</a>
+            <a data-toggle="list" href="#css-content" class="list-group-item list-group-item-action">CSS</a>
+            <a data-toggle="list" href="#javascript-content" class="list-group-item list-group-item-action">JavaScript</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="html-content"><h4>hell..HTML</h4><p>..tab-pane</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam incidunt, voluptate, excepturi recusandae facilis blanditiis, iure nisi maxime architecto ullam autem mollitia nemo sequi? Vitae magnam fugit debitis ipsum nemo?</p></div>
+            <div class="tab-pane" id="css-content"><h4>hello..CSS</h4><p>..tab-pane</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil porro possimus vero libero animi pariatur non odio aperiam cum  que error, laudantium quibusdam voluptates atque doloremque nostrum nulla dolorem corrupti qui!</p></div>
+            <div class="tab-pane" id="javascript-content"><h4>hello..JavaScript</h4><p>..tab-pane</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit illo quo assumenda, vel alias magnam porro ratione accusamus labore sapiente in atque officia doloremque eligendi iure praesentium unde, sunt voluptas?</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal对话框 默认隐藏 添加d-block显示-->
+    <div class="component test">
+      <code>弹窗对话框modal默认隐藏.. > .modal-dialog.. > .modal-content > .modal-header > .modal-title || .modal-body || .modal-footer > .btn-"情景" <br/>
+            btn删除按钮 data-toggle = "modal" data-target = "#id" ; 清除对话框弹出后默认的半透明遮罩 data-backdrop = "false" <br/>
+            js控制对话框 $('#modal-demo').modal('hide/show/toggle'); <br/>
+            js监听显示/关闭modal对话框状态: <br/> $('#modal-demo').on('modal.bs.show/shown/hide/hidden',function(){<br>
+              /console.log('show/shown/hide/hidden')<br/>
+            })
+      </code><br/>
+      <div id="modal-demo" class="modal fade show">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">modal~title</h5>
+              <button class="close" data-dismiss="modal">&times</button>
+            </div>
+            <div class="modal-body">
+              <p>确认删除吗?</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary">取消</button>
+              <button class="btn btn-secondary">确认</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-demo">弹出删除Modal对话框</button>
+    </div>
+    <!-- nav导航 -->
+    <div class="component test">
+      <code>
+        nav水平导航:ul.nav > li.nav-item > a.nav-link  水平居中:justify-content-center / 水平靠右:justify-content-end <br/>
+        改变导航样式:.nav-tabs / nav-pills / nav-fill <br/>
+        nav垂直导航:ul.nav.flex-column > li.nav-item > a.nav-link
+      </code><br/>
+      <div class="row justify-content-between">
+        <div class="col-5">
+          <code>两端对齐 justify-content-between</code><br/>
+          <ul class="nav justify-content-between">
+            <li class="nav-item"><a class="nav-link btn-secondary" href="#">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JavaScript</a></li>
+          </ul>
+          <div class="w-100"></div>
+          <code>宽度相当 nav-justified / 居中 justify-content-center</code><br/>
+          <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item"><a href="#" class="nav-link btn-danger active">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+          </ul>
+          <div class="w-100"></div>
+          <code>靠右显示 justify-content-end</code><br/>
+          <ul class="nav nav-tabs justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link btn-warning active">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+          </ul>
+          <div class="w-100"></div>
+          <code>占满整行 nav-pills .nav-fill</code><br/>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item"><a href="#" class="nav-link active">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+          </ul>
+        </div>
+        <div class="col-5">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link btn-primary">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- navbar导航栏 -->
+    <div class="component test">
+      <code>navbar导航栏: navbar.navbar-expand-sm/md中小尺寸展开.navbar-light改变nav-item颜色.bg-light背景浅灰色 > navbar-brand || navbar-nav > nav-item > nav-link</code><br/>
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">LOGO</a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">学习</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">社区</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">博客</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- navbar响应式导航栏 -->
+    <div class="component test">
+      <code>navbar响应式导航栏.navbar > .navbar-brand || button.navbar-toggler [data-toggle="collapse" data-target="#id"]>span.navbar-toggler.icon <br/>
+            .collapse.navbar-collpase id="#" > ul.navbar-nav > li.nav-item > a.nav-link <br>
+            导航栏固定定位fixed-top/fixed-bottom 相对吸顶定位 sticky-top部分浏览器不支持
+            <xmp>源码</xmp>
+      </code><br/>
+
+      <nav class="navbar navbar-expand-md navbar-light bg-primary">
+        <a href="#" class="navbar-brand">LOGO</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link">学习</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">社区</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">博客</a></li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- pagination分页器 -->
+    <div class="component test">
+      <div class="row">
+        <div class="col-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a href="#" class="page-link">前进</a></li>
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">后退</a></li>
+          </ul>
+        </div>
+        <!-- pagination分页器源码 start -->
+        <div class="col-7">
+          <code>pagination分页器源码:
+            <xmp>
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a href="#" class="page-link">前进</a></li>
+                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">后退</a></li>
+              </ul>
+            </xmp>
+          </code>
+        </div>
+        <!-- pagination分页器源码 end -->
+      </div>
+    </div>
+    <!-- popovers提示信息 -->
+    <div class="component test">
+      <div class="row">
+        <div class="col-5">
+          <button class="btn btn-primary" data-toggle="popover"
+                  title="静夜思" data-content="床前明月光,疑是地上霜,举头望明月,低头思故乡"
+                  data-placement="bottom" data-trigger="focus">
+            Popover提示
+         </button>
+        </div>
+        <!-- Popover提示信息源码 start -->
+        <div class="col-7">
+          <code>Popover提示信息源码:
+            <xmp>
+              <button class="btn btn-primary" data-toggle="popover"
+                      title="静夜思"
+                      data-content="床前明月光,疑是地上霜,举头望明月,低头思故乡"
+                      data-placement="bottom" data-trigger="focus">
+                Popover提示
+              </button>
+              配置popover提示信息js：
+              $('[data-toggle="popover"]').popover();
+            </xmp>
+          </code>
+        </div>
+        <!-- Popover提示信息源码 end -->
+      </div>
+    </div>
+    <!-- progress进度条 -->
+    <div class="component test">
+      <div class="row">
+        <div class="col-5">
+          <div class="progress"><!-- 静态进度条 -->
+            <div class="progress-bar" style="width:35%">35%</div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="progress"> <!-- 条纹进度条 -->
+            <div class="progress-bar progress-bar-striped" style="width:66%">66%</div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="progress"> <!-- 动感进度条 -->
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:78%">78%</div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="progress"> <!-- 更换背景动感进度条 -->
+            <div class="bg-danger progress-bar progress-bar-striped progress-bar-animated" style="width:78%">78%</div>
+          </div>
+        </div>
+        <!-- progress进度条源码 start -->
+        <div class="col-7">
+          <code>
+            progress源码：
+            <xmp>
+              <div class="progress"><!-- 静态进度条 -->
+                <div class="progress-bar" style="width:35%">35%</div>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="progress"> <!-- 条纹进度条 -->
+                <div class="progress-bar progress-bar-striped" style="width:66%">66%</div>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="progress"> <!-- 动感进度条 -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:78%">78%</div>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="progress"> <!-- 更换背景动感进度条 -->
+                <div class="bg-danger progress-bar progress-bar-striped progress-bar-animated" style="width:78%">78%</div>
+              </div>
+          </xmp>
+        </code>
+        </div>
+        <!-- progress进度条源码 end -->
+      </div>
+    </div>
+    <!-- tooltip工具提示信息 -->
+    <div class="component test">
+      <div class="row">
+        <div class="col-5">
+          <button class="btn btn-outline-danger" data-toggle="tooltip" title="hello~tooltip" data-placement="top">Tooltip</button>
+        </div>
+        <div class="col-7">
+          <code>tooltip提示信息源码:
+            <xmp>
+              <button class="btn btn-outline-danger" data-toggle="tooltip"
+                title="hello~tooltip" data-placement="top">Tooltip</button>
+               <!--配置tooltip提示的js:-->
+              $('[data-togle="tooltip"]').tooltip();
+            </xmp>
+          </code>
+        </div>
+      </div>
+    </div>
+    <!-- 表单元素 -->
+    <div class="component test">
+      <div class="row">
+        <div class="col-5">
+            <label class="control-label" for="email">邮件地址</label>
+            <input class="form-control" type="e-mail" id="email" placeholder="请输入您的邮箱地址" />
+            <small class="form-text text-muted">请输入正确的邮箱地址,接收邮件信息验证</small>
+        </div>
+        <!-- input表单元素源码 -->
+        <div class="col-7">
+          <code>表单源码:
+            <xmp>
+              <label class="control-label" for="email">邮件地址</label>
+              <input class="form-control" type="e-mail" id="email" placeholder="请输入您的邮箱地址">
+              <small class="form-text text-muted">请输入正确的邮箱地址,接收邮件信息验证</small>
+              <!-- text-muted 让文字颜色变浅 -->
+            </xmp>
+          </code>
+        </div>
+      </div>
+    </div>
+    <!-- 文本框的变化附加显示 -->
+    <div class="component test">
+    </div>
 </body>
 </html>
